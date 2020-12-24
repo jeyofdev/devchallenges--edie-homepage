@@ -1,0 +1,35 @@
+// variables
+//
+
+// breakpoints
+//
+$containerbreakpoints: () !default;
+$containerbreakpoints: map-merge(
+  (
+    'xs': 0,
+    'sm': 576px,
+    'md': 768px,
+    'lg': 992px,
+    'xl': 1200px,
+  ),
+  $containerbreakpoints
+);
+
+// containers
+//
+// width of the container padding
+//
+$container-gutter-width: 30px !default;
+
+// widths for each breakpoints
+//
+$containerWidths: () !default;
+$containerWidths: map-merge(
+  (
+    sm: 540px,
+    md: 720px,
+    lg: 955px,
+    xl: 1140px,
+  ),
+  $containerWidths
+);
