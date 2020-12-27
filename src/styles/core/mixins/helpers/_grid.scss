@@ -6,7 +6,9 @@
 @mixin make-css-grid(
   $grid-template-rows: null,
   $grid-template-columns: null,
-  $gap: null
+  $gap: null,
+  $grid-template-areas: null,
+  $align-items: null
 ) {
   display: grid;
 
@@ -20,5 +22,13 @@
 
   @if ($gap != null) {
     gap: $gap;
+  }
+
+  @if ($grid-template-areas != null) {
+    grid-template-areas: $grid-template-areas;
+  }
+
+  @if ($align-items != null) {
+    align-items: $align-items;
   }
 }
