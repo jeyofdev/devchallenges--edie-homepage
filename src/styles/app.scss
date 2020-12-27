@@ -9,6 +9,19 @@
 @import 'core/layout';
 @import 'core/reset';
 
-// app
+// default
+//
 @import 'app/default';
+
+// app
+//
 @import 'app/nav';
+@import 'app/hero';
+@import 'app/sections';
+@import 'app/footer';
+
+// sections
+@import 'app/sections/services';
+@import 'app/sections/works';
+@import 'app/sections/team';
+@import 'app/sections/testimonials';

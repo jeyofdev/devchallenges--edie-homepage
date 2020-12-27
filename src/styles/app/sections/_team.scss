@@ -1,0 +1,52 @@
+.section-team .container {
+  @include make-css-grid(auto, 1fr, rem(35));
+
+  @include media-queries-up('md') {
+    @include make-css-grid(auto, repeat(2, 1fr), rem(50), null, center);
+  }
+}
+
+/* ========================
+    TEAM CONTENT
+======================== */
+.section-team .team-content {
+  .team-subtitle {
+    @extend %subtitle;
+
+    color: $danger;
+    margin-bottom: rem(7);
+  }
+
+  .team-text {
+    @extend %content;
+
+    max-width: rem(275);
+    margin-top: rem(14);
+
+    @include media-queries-up('md') {
+      max-width: rem(365);
+    }
+  }
+}
+
+/* ========================
+    TEAM PHOTOS
+======================== */
+.section-team .team-photos {
+  @include make-css-grid(
+    repeat(2, 1fr),
+    repeat(2, 1fr),
+    rem(24),
+    'member-3 member-1' 'member-3 member-2',
+    center
+  );
+
+  // generate grid-area for img tag
+  @for $i from 1 to 4 {
+    .team-member-#{$i} {
+      grid-area: member-#{$i};
+      display: block;
+      border-radius: rem(14);
+    }
+  }
+}

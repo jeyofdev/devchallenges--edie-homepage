@@ -1,0 +1,93 @@
+/* ========================
+    FOOTER
+======================== */
+footer {
+  background: $footer-bg;
+  padding: rem(36) rem(40);
+
+  @include media-queries-up('md') {
+    padding: rem(46) rem(30);
+  }
+
+  .container {
+    @include make-css-grid(
+      auto,
+      1fr,
+      rem(65),
+      'footer-nav' 'footer-rs' 'footer-form' 'footer-copyright'
+    );
+
+    @include media-queries-up('md') {
+      @include make-css-grid(
+        auto,
+        repeat(3, 1fr),
+        rem(30),
+        'footer-nav footer-rs footer-form'
+          'footer-copyright footer-copyright footer-copyright'
+      );
+    }
+  }
+}
+
+/* ========================
+    FOOTER NAV
+======================== */
+footer .footer-nav {
+  grid-area: footer-nav;
+
+  ul li a {
+    @extend %nav-link;
+
+    font-size: rem(18);
+    color: $footer-links-color;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+/* ========================
+    FOOTER SOCIAL
+======================== */
+footer .footer-rs {
+  grid-area: footer-rs;
+
+  .logo > a {
+    @extend %logo;
+
+    display: inline-block;
+    color: $light;
+    margin-bottom: rem(8);
+  }
+
+  .rs a {
+    &:nth-last-child(2) {
+      margin: 0 rem(8);
+    }
+  }
+}
+
+/* ========================
+    FOOTER FORM
+======================== */
+footer .footer-form {
+  grid-area: footer-form;
+
+  @extend %form;
+}
+
+/* ========================
+    FOOTER COPYRIGHT
+======================== */
+footer .footer-copyright {
+  @extend %content-copyright;
+
+  grid-area: footer-copyright;
+  margin-top: rem(65);
+
+  @include media-queries-up('md') {
+    margin-top: rem(80);
+  }
+}

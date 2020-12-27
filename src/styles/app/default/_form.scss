@@ -1,0 +1,63 @@
+::placeholder {
+  color: $placeholder-color;
+}
+
+%form {
+  p {
+    @extend %subtitle-element;
+
+    margin-bottom: rem(5);
+  }
+
+  .form-group {
+    @include make-flex(space-between);
+
+    border-radius: rem(12);
+    background: $input-bg;
+    outline: none;
+    max-width: rem(275);
+
+    @include media-queries-up('md') {
+      max-width: rem(365);
+    }
+
+    input {
+      @extend %content-element;
+
+      color: $input-color;
+      background: transparent;
+      border-radius: rem(12);
+      border: none;
+      padding: rem(11) rem(15);
+      width: 58%;
+      outline: none;
+
+      @include media-queries-up('md') {
+        padding: rem(11) rem(17);
+        width: 67%;
+      }
+    }
+
+    button {
+      @extend %content-element;
+
+      color: $button-primary-color;
+      background: $button-primary-bg;
+      border-radius: rem(12);
+      border: none;
+      padding: rem(13) rem(18);
+      margin: rem(4);
+      line-height: 1;
+      align-self: center;
+      cursor: pointer;
+
+      &:hover {
+        background: darken($primary, 5%);
+      }
+
+      @include media-queries-up('md') {
+        padding: rem(13) rem(27);
+      }
+    }
+  }
+}

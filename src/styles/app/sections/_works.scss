@@ -1,0 +1,112 @@
+.section-works .container {
+  position: relative;
+}
+
+/* ========================
+    WORKS CARDS
+======================== */
+.section-works .works-cards {
+  @include make_css_grid(auto, 1fr, rem(30));
+
+  @include media-queries-down('md') {
+    margin-top: rem(48);
+    margin-bottom: rem(35);
+  }
+
+  @include media-queries-up('md') {
+    @include make_css_grid(auto, repeat(2, 1fr), 0 rem(20));
+  }
+}
+
+/* ==========================
+    WORKS SINGLE CARD TOP
+========================== */
+.section-works .works-cards .card {
+  .card-deco {
+    position: relative;
+    overflow: hidden;
+
+    .mask {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: $dark;
+      border-radius: 100%;
+      opacity: 0.75;
+      transform: scale(0);
+      transition: all 0.3s ease-in-out;
+
+      i {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $light;
+      }
+    }
+
+    &:hover .mask {
+      transform: scale(1.5);
+    }
+
+    img {
+      border-radius: rem(12);
+    }
+  }
+
+  @include media-queries-up('md') {
+    &:nth-child(odd) {
+      margin-top: rem(180);
+    }
+  }
+}
+
+/* ==============================
+    WORKS SINGLE CARD FOOTER
+============================== */
+.section-works .works-cards .card .card-footer {
+  .card-subtitle {
+    @extend %item-subtitle;
+
+    margin: rem(10) 0 rem(3);
+
+    @include media-queries-up('md') {
+      font-size: rem(14);
+      line-height: rem(18);
+    }
+  }
+
+  .card-title {
+    @extend %headings-h5;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.section-works .see-more {
+  @include make-flex(flex-start, center);
+  @extend %btn-outline-primary;
+
+  @include media-queries-up('md') {
+    @include make-flex(flex-end, center);
+
+    position: absolute;
+    bottom: 0;
+    right: rem(15);
+    margin-left: rem(17);
+  }
+
+  i {
+    margin-top: rem(5);
+    margin-left: rem(12);
+    background: transparent;
+    color: $primary;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover i {
+    margin-left: rem(17);
+  }
+}

@@ -1,0 +1,39 @@
+%btn {
+  @extend %text;
+
+  display: inline-block;
+  background: $secondary;
+  color: $gray-3;
+  font-size: rem(14);
+  border-radius: 12px;
+  padding: rem(9) rem(13);
+
+  &:hover {
+    background: darken($secondary, 5%);
+  }
+}
+
+%btn-primary {
+  @extend %btn;
+
+  background: $primary;
+  color: $light;
+
+  &:hover {
+    background: darken($primary, 5%);
+  }
+}
+
+%btn-outline {
+  @extend %text;
+
+  font-size: rem(18);
+  line-height: 1.65;
+  color: #2d9cdb;
+}
+
+%btn-outline-primary {
+  @extend %btn-outline;
+
+  color: $primary;
+}

@@ -20,7 +20,8 @@ $red: #eb5757 !default;
 
 $primary: $blue !default;
 $secondary: $gray-6 !default;
-$success: $red !default;
+$danger: $red !default;
+$success: $green !default;
 
 $body-bg: $light !default;
 $content-color: $gray-2 !default;
@@ -35,8 +36,9 @@ $nav-responsive-bg: $gray-1 !default;
 $nav-responsive-color: $gray-5 !default;
 
 $input-bg: $gray-5 !default;
-$input-color: $gray-4 !default;
+$input-color: $gray-2 !default;
 $input-subtitle-color: $gray-3 !default;
+$placeholder-color: $gray-4 !default;
 
 $icon-color: $light !default;
 
