@@ -1,0 +1,72 @@
+.section-works .container {
+  position: relative;
+}
+
+/* ========================
+    WORKS CARDS
+======================== */
+.section-works .works-cards {
+  @include make_css_grid(auto, 1fr, rem(30));
+
+  @include media-queries-down('md') {
+    margin-top: rem(48);
+    margin-bottom: rem(35);
+  }
+
+  @include media-queries-up('md') {
+    @include make_css_grid(auto, repeat(2, 1fr), 0 rem(20));
+  }
+}
+
+/* ========================
+    WORKS SINGLE CARD
+======================== */
+.section-works .works-cards .card {
+  img {
+    border-radius: rem(12);
+  }
+
+  @include media-queries-up('md') {
+    &:nth-child(odd) {
+      margin-top: rem(180);
+    }
+  }
+}
+
+.section-works .works-cards .card .card-footer {
+  .card-subtitle {
+    @extend %item-subtitle;
+
+    margin: rem(10) 0 rem(3);
+
+    @include media-queries-up('md') {
+      font-size: rem(14);
+      line-height: rem(18);
+    }
+  }
+
+  .card-title {
+    @extend %headings-h5;
+  }
+}
+
+.section-works .see-more {
+  @include make-flex(flex-start, center);
+  @extend %btn-outline-primary;
+
+  @include media-queries-up('md') {
+    @include make-flex(flex-end, center);
+
+    position: absolute;
+    bottom: 0;
+    right: rem(15);
+    margin-left: rem(17);
+  }
+
+  i {
+    margin-top: rem(5);
+    margin-left: rem(12);
+    background: transparent;
+    color: $primary;
+  }
+}

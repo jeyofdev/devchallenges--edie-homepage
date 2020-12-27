@@ -1,3 +1,7 @@
+// container
+//
+@import 'default/container';
+
 // theme
 //
 @import 'default/theme';
@@ -13,3 +17,10 @@
 // button
 //
 @import 'default/buttons';
+
+// image
+//
+.img-fluid {
+  width: 100%;
+  height: auto;
+}
