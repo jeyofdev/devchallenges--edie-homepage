@@ -1,0 +1,15 @@
+.container.little {
+  padding: 0 rem(45);
+  max-width: none;
+
+  @include media-queries-up('md') {
+    padding-left: 24%;
+  }
+}
+
+@include media-queries-down('md') {
+  .container.medium {
+    padding: 0 rem(45);
+    max-width: none;
+  }
+}

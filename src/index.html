@@ -4,11 +4,306 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>document</title>
+  <title>Edie homepage</title>
 </head>
 
-<body>
-  <p>hello world !!!</p>
+<body id="home">
+  <!-- ================
+        HEADER
+  ================= -->
+  <nav class="nav nav-top">
+    <div class="container-fluid">
+      <div class="logo">
+        <a class="logo-link" href="#">Edie</a>
+      </div>
+  
+      <div class="trigger">
+        <button class="btn-trigger" id="btn-trigger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
+      </div><!-- ./trigger -->
+  
+      <div class="collapse navbar-collapse" id="collapse">
+        <ul class="navbar-nav" id="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#works">Our works</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#team">Clients</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#testimonials">Contacts</a>
+          </li>
+        </ul><!-- ./navbar-nav -->
+      </div><!-- ./navbar-collapse -->
+    </div><!-- ./container-fluid -->
+  </nav>
+
+  <main>
+    <!-- ================
+          HOME
+    ================= -->
+    <div class="hero" id="hero">
+      <div class="container little hero-top">
+        <p class="hero-top-subtitle">Unhappy with your website?</p>
+        <h1 class="hero-top-title">
+          <span>We create beautiful</span>
+          <span>and fast web services</span>
+        </h1>
+      </div><!-- ./hero-top -->
+
+      <div class="container-fluid hero-img">
+        <img class="img-fluid" src="./images/heroImage.jpg" alt="">
+      </div>
+
+      <div class="container little hero-bottom">
+        <h2 class="hero-bottom-title">
+          <span>Story, emotion </span>
+          <span> and purpose</span>
+        </h2>
+        <p class="hero-bottom-content">We help transform your ideas into real world applications that will outperform your toughest competition and help you achieve your strategic goals in short period of time.</p>
+
+        <form class="hero-form">
+          <p>Want us to contact you?</p>
+          <div class="form-group">
+            <input type="email" name="email" id="email" placeholder="Email">
+            <button type="submit">Join</button>
+          </div>
+        </form>
+      </div><!-- ./hero-bottom -->
+    </div><!-- ./section-home -->
+
+
+    <!-- ================
+          SERVICES
+    ================= -->
+    <section class="section section-services" id="services">
+      <div class="container medium">
+        <h2>
+          <span>We offer high</span>
+          <span>demand services</span>
+        </h2>
+        <div class="services-cards">
+          <div class="card">
+            <i class="material-icons bg-primary">create</i>
+            <div class="card-body">
+              <h5 class="card-title">UI/UX Design</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac nulla consequat aliquet id quis turpis.</p>
+              <a href="#" class="btn">Get started</a>
+            </div>
+          </div><!-- ./card -->
+
+          <div class="card">
+            <i class="material-icons bg-success">code</i>
+            <div class="card-body">
+              <h5 class="card-title">Front End</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac nulla consequat aliquet id quis turpis.</p>
+              <a href="#" class="btn btn-primary">Get started</a>
+            </div>
+          </div><!-- ./card -->
+
+          <div class="card">
+            <i class="material-icons bg-danger">storage</i>
+            <div class="card-body">
+              <h5 class="card-title">Back End</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac nulla consequat aliquet id quis turpis.</p>
+              <a href="#" class="btn">Get started</a>
+            </div>
+          </div><!-- ./card -->
+        </div><!-- ./services-cards -->
+      </div><!-- ./container -->
+    </section><!-- section-services -->
+
+    <!-- ================
+          WORKS
+    ================= -->
+    <section class="section section-works" id="works">
+      <div class="container">
+        <h2>
+          <span>Good design means</span>
+          <span>good business</span>
+        </h2>
+
+        <div class="works-cards">
+          <div class="card">
+            <div class="card-deco">
+              <div class="mask">
+                <a href="">
+                  <i class="material-icons">search</i>
+                </a>
+              </div>
+              <img class="img-fluid" src="./images/onboard.png" alt="">
+            </div>
+          
+            <div class="card-footer">
+              <p class="card-subtitle">Full stack application</p>
+              <a href="">
+                <h5 class="card-title">Smart home dashboard</h5>
+              </a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-deco">
+              <div class="mask">
+                <a href="">
+                  <i class="material-icons">search</i>
+                </a>
+              </div>
+              <img class="img-fluid" src="./images/booking.png" alt="">
+            </div>
+            <div class="card-footer">
+              <p class="card-subtitle">UX/UI design</p>
+              <a href="">
+                <h5 class="card-title">Onboard application</h5>
+              </a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-deco">
+              <div class="mask">
+                <a href="">
+                  <i class="material-icons">search</i>
+                </a>
+              </div>
+              <img class="img-fluid" src="./images/juice-product.png" alt="">
+            </div>
+            
+            <div class="card-footer">
+              <p class="card-subtitle">Front End applicati on</p>
+              <a href="">
+                <h5 class="card-title">Booking system</h5>
+              </a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-deco">
+              <div class="mask">
+                <a href="">
+                  <i class="material-icons">search</i>
+                </a>
+              </div>
+              <img class="img-fluid" src="./images/smarthome.jpg" alt="">
+            </div>
+            <div class="card-footer">
+              <p class="card-subtitle">Mobile application</p>
+              <a href="">
+                <h5 class="card-title">Juice product homepage</h5>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a class="text-primary see-more" href="">See more <i class="material-icons bg-success">east</i></a>
+      </div>
+    </section>
+
+
+    <!-- ================
+          TEAM
+    ================= -->
+    <section class="section section-team" id="team">
+      <div class="container">
+        <div class="team-content">
+          <p class="team-subtitle">Meet the team</p>
+          <h2>
+            <span>We are chilled</span>
+            <span>and a laidback</span>
+            <pan>team</pan>
+          </h2>
+          <p class="team-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div><!-- ./team-content -->
+
+        <div class="team-photos">
+          <img class="team-member-1 img-fluid" src="./images/person1.png" alt="">
+          <img class="team-member-2 img-fluid" src="./images/person2.png" alt="">
+          <img class="team-member-3 img-fluid" src="./images/person3.png" alt="">
+        </div><!-- ./team-photos -->
+      </div><!-- ./container -->
+    </section><!-- ./section-team -->
+
+    <!-- ================
+          TESTIMONIAL
+    ================= -->
+    <section class="section section-testimonials" id="testimonials">
+      <div class="container">
+        <blockquote>“Fast and outstanding resutls. Edie understands their customer’s needs. They have a young and talented team.”</blockquote>
+        <div class="testionial-author">
+          <img class="img-fluid" src="./images/person4.png" alt="">
+          <div class="author-bottom">
+            <h5 class="author-name">Carlos Tran</h5>
+            <p author-job>The Decorate Gatsby</p>
+          </div>
+        </div><!-- ./testionial-author -->
+      </div><!-- ./container -->
+    </section><!-- ./section-testimonials -->
+
+    <!-- ================
+          FOOTER
+    ================= -->
+    <footer>
+      <div class="container">
+        <nav class="footer-nav">
+          <ul>
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#works">Our works</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#team">Clients</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonials">Contacts</a>
+            </li>
+          </ul>
+        </nav><!-- ./footer-nav -->
+  
+        <div class="footer-rs">
+          <div class="logo">
+            <a class="logo-link" href="#">Edie</a>
+          </div>
+          <div class="rs">
+            <a href="">
+              <img src="./images/instagram.svg" alt="">
+            </a>
+            <a href="">
+              <img src="./images/linkedin.svg" alt="">
+            </a>
+            <a href="">
+              <img src="./images/twitter.svg" alt="">
+            </a>
+          </div>
+        </div><!-- ./footer-rs -->
+  
+        <form class="footer-form">
+          <p>Want us to contact you?</p>
+          <div class="form-group">
+            <input type="email" name="footer_email" id="footer_email" placeholder="Email">
+            <button type="submit">Join</button>
+          </div>
+        </form><!-- ./footer-rs -->
+  
+        <div class="footer-copyright">
+          <p>jeyofdev @ DevChallenges.io</p>
+        </div>
+      </div><!-- ./container -->
+    </footer>
+  </main>
 </body>
 
 </html>

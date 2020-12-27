@@ -1,0 +1,11 @@
+.section {
+  margin-bottom: rem(100);
+
+  @include media-queries-up('md') {
+    margin-bottom: rem(200);
+  }
+}
+
+.section h2 {
+  @extend %headings-h2;
+}

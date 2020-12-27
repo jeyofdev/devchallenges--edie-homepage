@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@800&family=Montserrat:wght@600&family=Poppins:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  > span {
+    display: block;
+  }
+}
+
+%text {
+  font-family: $font-family-primary;
+  font-style: normal;
+  font-weight: 500;
+  color: $content-color;
+  line-height: 1.5;
+}
+
+/* ========================
+    HEADINGS
+======================== */
+%headings-h1 {
+  @extend %text;
+
+  color: $headings-color;
+  font-size: rem(24);
+  line-height: 1.4;
+
+  @include media-queries-up('md') {
+    font-size: rem(48);
+  }
+}
+
+%headings-h2 {
+  @extend %headings-h1;
+
+  @include media-queries-up('md') {
+    font-size: rem(36);
+  }
+}
+
+%headings-h5 {
+  @extend %headings-h1;
+
+  font-size: rem(18);
+  line-height: 1.4;
+
+  @include media-queries-up('md') {
+    font-size: rem(24);
+  }
+}
+
+/* ========================
+    CONTENT
+======================== */
+%content {
+  @extend %text;
+
+  font-weight: normal;
+  font-size: rem(16);
+  line-height: 1.65;
+}
+
+%content-element {
+  @extend %text;
+
+  font-size: rem(14);
+  line-height: 1.6;
+
+  @include media-queries-up('md') {
+    font-size: rem(18);
+  }
+}
+
+/* ========================
+    TITLE
+======================== */
+%item-title {
+  @extend %text;
+
+  font-weight: 700;
+  font-size: rem(24);
+  line-height: 1.5;
+  color: $headings-color;
+}
+
+%item-subtitle {
+  @extend %text;
+
+  color: $content-subtitle-color;
+  font-weight: 300;
+  font-size: rem(12);
+  line-height: 1.25;
+
+  @include media-queries-up('md') {
+    font-size: rem(18);
+  }
+}
+
+/* ========================
+    SUBTITLE
+======================== */
+%subtitle {
+  @extend %text;
+
+  color: $primary;
+  font-size: rem(12);
+
+  @include media-queries-up('md') {
+    font-size: rem(18);
+  }
+}
+
+%subtitle-element {
+  @extend %text;
+
+  color: $content-subtitle-color;
+  font-size: rem(10);
+  line-height: 1.45;
+
+  @include media-queries-up('md') {
+    font-size: rem(14);
+  }
+}
+
+/* ========================
+    LOGO
+======================== */
+%logo {
+  font-family: $font-family-logo;
+  color: $headings-color;
+  font-style: normal;
+  font-weight: 800;
+  font-size: rem(30);
+  line-height: 1;
+}
+
+/* ========================
+    NAV
+======================== */
+%nav-link {
+  @extend %text;
+
+  color: $nav-link-color-secondary;
+  font-size: rem(18);
+  text-transform: capitalize;
+}
+
+/* ========================
+    TESTIMONIALS
+======================== */
+%testimonial-content {
+  @extend %text;
+
+  font-size: rem(24);
+  line-height: 1.5;
+  color: $headings-color;
+
+  @include media-queries-up('md') {
+    font-size: rem(36);
+  }
+}
+
+/* ========================
+    FOOTER
+======================== */
+%content-copyright {
+  font-family: $font-family-footer;
+  font-style: normal;
+  font-weight: 600;
+  font-size: rem(14);
+  line-height: 1.25;
+  color: $footer-copyright-color;
+  text-align: center;
+}
