@@ -13,7 +13,6 @@
 
     @include media-queries-up('md') {
       grid-template-columns: 20% 80%;
-      margin-top: rem(42);
     }
   }
 }
@@ -22,19 +21,9 @@
     LOGO
 ======================== */
 .nav-top .logo > a {
-  display: inline-block;
-  font-family: $font-family-logo;
-  color: $headings-color;
-  font-style: normal;
-  font-weight: 800;
-  font-size: rem(24);
-  line-height: rem(35);
-  text-decoration: none;
+  @extend %logo;
 
-  @include media-queries-up('md') {
-    font-size: rem(36);
-    line-height: rem(53);
-  }
+  display: inline-block;
 }
 
 /* ========================
@@ -150,14 +139,7 @@
 }
 
 .collapse .navbar-nav .nav-item .nav-link {
-  font-family: $font-family-primary;
-  color: $nav-link-color-secondary;
-  font-style: normal;
-  font-weight: 500;
-  font-size: rem(18);
-  line-height: rem(24);
-  text-transform: capitalize;
-  text-decoration: none;
+  @extend %nav-link;
 
   @include media-queries-up('md') {
     color: $nav-link-color;

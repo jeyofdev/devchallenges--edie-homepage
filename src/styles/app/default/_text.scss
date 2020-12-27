@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@800&family=Montserrat:wght@600&family=Poppins:wght@400;500;700&display=swap');
+
+%text {
+  font-family: $font-family-primary;
+  font-style: normal;
+  font-weight: 500;
+  color: $content-color;
+  line-height: 1.5;
+}
+
+%logo {
+  font-family: $font-family-logo;
+  color: $headings-color;
+  font-style: normal;
+  font-weight: 800;
+  font-size: rem(30);
+  line-height: 1;
+  text-decoration: none;
+}
+
+%nav-link {
+  @extend %text;
+
+  color: $nav-link-color-secondary;
+  font-size: rem(18);
+  text-transform: capitalize;
+  text-decoration: none;
+}
