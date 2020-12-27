@@ -78,6 +78,10 @@
 
   .card-title {
     @extend %headings-h5;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -99,5 +103,10 @@
     margin-left: rem(12);
     background: transparent;
     color: $primary;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover i {
+    margin-left: rem(17);
   }
 }

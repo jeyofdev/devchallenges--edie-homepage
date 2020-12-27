@@ -1,10 +1,16 @@
+@include media-queries-down('md') {
+  .section-services h2 {
+    padding: 0 rem(15);
+  }
+}
+
 /* ========================
     SERVICES CARDS
 ======================== */
 .section-services .services-cards {
   @include make-css-grid(auto, 1fr, rem(40));
 
-  margin-top: rem(115);
+  margin-top: rem(30);
 
   @include media-queries-up('md') {
     @include make-css-grid(auto, repeat(3, 1fr), rem(20));
@@ -19,7 +25,7 @@
 .section-services .services-cards .card {
   background: transparent;
   border-radius: rem(24);
-  padding: rem(45) rem(35);
+  padding: rem(15) rem(20);
 
   &:hover {
     box-shadow: rem(0) rem(10) rem(30) rgba(51, 51, 51, 0.1);
@@ -29,6 +35,7 @@
 .section-services .services-cards .card > i {
   padding: rem(19);
   border-radius: rem(16);
+  font-size: 1.75rem;
 }
 
 /* ===============================

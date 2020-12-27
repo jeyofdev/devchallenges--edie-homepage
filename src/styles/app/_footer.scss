@@ -40,6 +40,11 @@ footer .footer-nav {
 
     font-size: rem(18);
     color: $footer-links-color;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      margin-left: 0.5rem;
+    }
   }
 }
 
@@ -80,9 +85,9 @@ footer .footer-copyright {
   @extend %content-copyright;
 
   grid-area: footer-copyright;
-  margin-top: rem(130);
+  margin-top: rem(65);
 
   @include media-queries-up('md') {
-    margin-top: rem(110);
+    margin-top: rem(80);
   }
 }

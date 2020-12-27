@@ -28,12 +28,12 @@
       background: transparent;
       border-radius: rem(12);
       border: none;
-      padding: rem(15) rem(19);
+      padding: rem(11) rem(15);
       width: 58%;
       outline: none;
 
       @include media-queries-up('md') {
-        padding: rem(15) rem(21);
+        padding: rem(11) rem(17);
         width: 67%;
       }
     }
@@ -45,11 +45,18 @@
       background: $button-primary-bg;
       border-radius: rem(12);
       border: none;
-      padding: rem(11) rem(18);
+      padding: rem(13) rem(18);
       margin: rem(4);
+      line-height: 1;
+      align-self: center;
+      cursor: pointer;
+
+      &:hover {
+        background: darken($primary, 5%);
+      }
 
       @include media-queries-up('md') {
-        padding: rem(11) rem(27);
+        padding: rem(13) rem(27);
       }
     }
   }
