@@ -1,3 +1,7 @@
+::placeholder {
+  color: $placeholder-color;
+}
+
 %form {
   p {
     @extend %subtitle-element;

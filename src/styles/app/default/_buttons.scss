@@ -1,0 +1,18 @@
+%btn {
+  @extend %text;
+
+  display: inline-block;
+  background: $secondary;
+  color: $gray-3;
+  font-size: rem(14);
+  text-decoration: none;
+  border-radius: 12px;
+  padding: rem(9) rem(13);
+}
+
+%btn-primary {
+  @extend %btn;
+
+  background: $primary;
+  color: $light;
+}

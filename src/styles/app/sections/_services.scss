@@ -1,0 +1,60 @@
+/* ========================
+    SERVICES CARDS
+======================== */
+.section-services .services-cards {
+  @include make-css-grid(auto, 1fr, rem(40));
+
+  margin-top: rem(115);
+
+  @include media-queries-up('md') {
+    @include make-css-grid(auto, repeat(3, 1fr), rem(20));
+
+    margin-top: rem(42);
+  }
+}
+
+/* =========================
+    SERVICES CARD SINGLE
+========================= */
+.section-services .services-cards .card {
+  background: transparent;
+  border-radius: rem(24);
+  padding: rem(45) rem(35);
+
+  &:hover {
+    box-shadow: rem(0) rem(10) rem(30) rgba(51, 51, 51, 0.1);
+  }
+}
+
+.section-services .services-cards .card > i {
+  padding: rem(19);
+  border-radius: rem(16);
+}
+
+/* ===============================
+    SERVICES CARD SINGLE BODY
+=============================== */
+.section-services .services-cards .card-body {
+  margin-top: rem(35);
+
+  .card-title {
+    @extend %item-title;
+
+    font-size: rem(20);
+    margin: rem(35) 0 rem(25);
+  }
+
+  .card-text {
+    @extend %content;
+  }
+
+  .btn {
+    @extend %btn;
+
+    margin-top: rem(30);
+
+    &.btn-primary {
+      @extend %btn-primary;
+    }
+  }
+}
