@@ -1,0 +1,39 @@
+/* =============================
+    TESTIMONIAL BLOCKQUOTE
+============================= */
+.section-testimonials blockquote {
+  @extend %testimonial-content;
+
+  margin-bottom: rem(18);
+
+  @include media-queries-up('md') {
+    margin-bottom: rem(36);
+    width: 80%;
+    max-width: rem(935);
+  }
+}
+
+/* =============================
+    TESTIMONIAL AUTHOR
+============================= */
+.section-testimonials .testionial-author {
+  @include make-css-grid(auto, rem(85) auto, rem(30), null, center);
+
+  > img {
+    border-radius: 12px;
+  }
+}
+
+.section-testimonials .testionial-author .author-bottom {
+  h5 {
+    @extend %headings-h5;
+
+    margin-bottom: rem(8);
+  }
+
+  p {
+    @extend %item-subtitle;
+
+    font-size: rem(16);
+  }
+}

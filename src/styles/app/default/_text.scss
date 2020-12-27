@@ -151,3 +151,18 @@ h6 {
   text-transform: capitalize;
   text-decoration: none;
 }
+
+/* ========================
+    TESTIMONIALS
+======================== */
+%testimonial-content {
+  @extend %text;
+
+  font-size: rem(24);
+  line-height: 1.5;
+  color: $headings-color;
+
+  @include media-queries-up('md') {
+    font-size: rem(36);
+  }
+}
