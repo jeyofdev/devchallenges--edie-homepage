@@ -9,6 +9,11 @@
 @import 'core/layout';
 @import 'core/reset';
 
-// app
+// default
+//
 @import 'app/default';
+
+// app
+//
 @import 'app/nav';
+@import 'app/hero';

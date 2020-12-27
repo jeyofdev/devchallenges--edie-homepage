@@ -8,6 +8,80 @@
   line-height: 1.5;
 }
 
+/* ========================
+    HEADINGS
+======================== */
+%headings-h1 {
+  @extend %text;
+
+  color: $headings-color;
+  font-size: rem(24);
+  line-height: 1.4;
+
+  @include media-queries-up('md') {
+    font-size: rem(48);
+  }
+}
+
+%headings-h2 {
+  @extend %headings-h1;
+
+  @include media-queries-up('md') {
+    font-size: rem(36);
+  }
+}
+
+/* ========================
+    CONTENT
+======================== */
+%content {
+  @extend %text;
+
+  font-weight: normal;
+  font-size: rem(16);
+  line-height: 1.65;
+}
+
+%content-element {
+  @extend %text;
+
+  font-size: rem(14);
+  line-height: 1.6;
+
+  @include media-queries-up('md') {
+    font-size: rem(18);
+  }
+}
+
+/* ========================
+    SUBTITLE
+======================== */
+%subtitle {
+  @extend %text;
+
+  color: $primary;
+  font-size: rem(12);
+
+  @include media-queries-up('md') {
+    font-size: rem(18);
+  }
+}
+
+%subtitle-element {
+  @extend %text;
+
+  color: $content-subtitle-color;
+  font-size: rem(10);
+  line-height: 1.45;
+
+  @include media-queries-up('md') {
+    font-size: rem(14);
+  }
+}
+
+/* ========================
+    LOGO
+======================== */
 %logo {
   font-family: $font-family-logo;
   color: $headings-color;
@@ -18,6 +92,9 @@
   text-decoration: none;
 }
 
+/* ========================
+    NAV
+======================== */
 %nav-link {
   @extend %text;
 
