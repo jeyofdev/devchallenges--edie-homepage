@@ -1,0 +1,53 @@
+/// media of at least the minimum breakpoint width
+///
+/// @param $name {string} name of the breakpoint used
+/// @param $breakpoints {map} list of the breakpoints
+@mixin media-queries-up($name, $breakpoints: $containerbreakpoints) {
+  $min: breakpoint-min($name, $breakpoints);
+
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+/// media of at least the maximum breakpoint width
+///
+/// @param $name {string} name of the breakpoint used
+/// @param $breakpoints {map} list of the breakpoints
+@mixin media-queries-down($name, $breakpoints: $containerbreakpoints) {
+  $max: breakpoint-max($name, $breakpoints);
+
+  @if $max {
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+/// media that spans multiple breakpoint widths
+///
+/// @param $nameMin {string} name of the minimal breakpoint used
+/// @param $nameMax {string} name of the maximal breakpoint used
+/// @param $breakpointsMin {map} list of the minimal breakpoint
+/// @param $breakpointsMax {map} list of the maximal breakpoint
+@mixin media-queries-between(
+  $nameMin,
+  $nameMax,
+  $breakpointsMin: $containerbreakpoints,
+  $breakpointsMax: $containerbreakpoints
+) {
+  $min: breakpoint-min($nameMin, $breakpointsMin);
+  $max: breakpoint-max($nameMax, $breakpointsMax);
+
+  @if $min != null and $max != null {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  }
+}

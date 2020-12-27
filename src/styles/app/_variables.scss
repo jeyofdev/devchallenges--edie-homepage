@@ -1,0 +1,91 @@
+// variables
+//
+
+// colors
+//
+$light: #fff !default;
+$dark: #000 !default;
+
+$gray-1: #333 !default;
+$gray-2: #4f4f4f !default;
+$gray-3: #828282 !default;
+$gray-4: #bdbdbd !default;
+$gray-5: #f2f2f2 !default;
+$gray-6: #e0e0e0 !default;
+$gray-7: #a9a9a9 !default;
+
+$blue: #2d9cdb !default;
+$green: #27ae60 !default;
+$red: #eb5757 !default;
+
+$primary: $blue !default;
+$secondary: $gray-6 !default;
+$success: $red !default;
+
+$body-bg: $light !default;
+$content-color: $gray-2 !default;
+$content-color-secondary: $gray-5 !default;
+$content-title-color: $gray-1 !default;
+$content-subtitle-color: $gray-3 !default;
+$headings-color: $gray-1 !default;
+
+$nav-link-color: $gray-1 !default;
+$nav-link-color-secondary: $light !default;
+$nav-responsive-bg: $gray-1 !default;
+$nav-responsive-color: $gray-5 !default;
+
+$input-bg: $gray-5 !default;
+$input-color: $gray-4 !default;
+$input-subtitle-color: $gray-3 !default;
+
+$icon-color: $light !default;
+
+$button-primary-bg: $primary !default;
+$button-primary-color: $light !default;
+$button-secondary-bg: $secondary !default;
+$button-secondary-color: $gray-3 !default;
+
+$footer-bg: #100e1d !default;
+$footer-links-color: $light !default;
+$footer-content-color: $gray-5 !default;
+$footer-copyright-color: $gray-7 !default;
+
+// Fonts
+//
+
+$font-family-primary: 'Poppins', sans-serif !default;
+$font-family-logo: 'Heebo', sans-serif !default;
+$font-family-footer: 'Montserrat', sans-serif !default;
+
+// breakpoints
+//
+$containerbreakpoints: () !default;
+$containerbreakpoints: map-merge(
+  (
+    'xs': 0,
+    'sm': 576px,
+    'md': 768px,
+    'lg': 992px,
+    'xl': 1200px,
+  ),
+  $containerbreakpoints
+);
+
+// containers
+//
+// width of the container padding
+//
+$container-gutter-width: 30px !default;
+
+// widths for each breakpoints
+//
+$containerWidths: () !default;
+$containerWidths: map-merge(
+  (
+    sm: 540px,
+    md: 720px,
+    lg: 955px,
+    xl: 1140px,
+  ),
+  $containerWidths
+);
